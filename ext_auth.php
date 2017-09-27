@@ -8,7 +8,6 @@ Author URI: http://automattic.com/wordpress-plugins/
 License: GPLv2 or later
  */
 
-
 //add_action('admin_enqueue_scripts','auth_enqueue_scripts');
 
 
