@@ -12,7 +12,7 @@ License: GPLv2 or later
 //add_action('admin_enqueue_scripts','auth_enqueue_scripts');
 
 
-add_shortcode('ext_auth_demo_page','ext_auth_demo_page'); // comment this out in production
+add_shortcode('ext_auth_demo','ext_auth_demo_page'); // comment this out in production
 
 wp_enqueue_script( 'ext_auth', plugin_dir_url( __FILE__ ) . 'ext_auth.js', array( 'jquery' ) );
 
@@ -78,20 +78,19 @@ function demo_auth( $user, $username, $password ){
   //remove_action('authenticate', 'wp_authenticate_username_password', 20);
 
   return $user;
-} 
+}
 
 
 function ext_auth_demo_page() {
-
 
 // <a href="/wp-login.php/?log=bob&pwd=asdf&rememberme=forever&wp-submit=Log+In&redirect_to=http%3A%2F%2Fdo.sudobob.com%2Fwp-admin%2F&testcookie=1" class="btn btn-success">Log Into Wordpress</a>
     
 ?>
 
-  <button id="ext_auth_button" class="btn btn-success">Log Into Wordpress</button>
+	<button id="ext_auth_button" class="btn btn-success">Log Into Wordpress</button>
 
-
-<? 
-
+<?php
 
 }
+
+?>
